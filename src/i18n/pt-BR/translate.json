@@ -1,0 +1,21 @@
+{
+  "unauthorized": "Não autorizado!",
+  "auth": {
+    "login": {
+      "errors": {
+        "userNotFound": {
+          "title": "Usuário e/ou senha inválidos!"
+        }
+      }
+    }
+  },
+  "users": {
+    "register": {
+      "success": "Usuário registrado com sucesso!",
+      "errors": {
+        "others": "Erro ao registrar usuário!",
+        "dup": "Este email de usuário já foi registrado!"
+      }
+    }
+  }
+}
