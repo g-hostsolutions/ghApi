@@ -15,8 +15,8 @@ export class ProductsController {
     return this.productsService.findAll(source)
   }
 
-  @Get(':source/:id')
-  findOne(@Param('id') id: string, @Param('source') source: string) {
-    return this.productsService.findOne(source, id)
+  @Get(':source/:search')
+  findOne(@Param('source') source: string, @Param('search') search: string) {
+    return this.productsService.findOne(source, search)
   }
 }

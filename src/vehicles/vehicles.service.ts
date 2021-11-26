@@ -27,4 +27,29 @@ export class VehiclesService {
       throw new BadRequestException(e.message)
     }
   }
+
+  find(search: string) {
+    try {
+      const query: any = {}
+      const regex = { $regex: `.*${search}.*` }
+
+      const or: any[] = [
+        {
+          color: regex,
+        },
+        {
+          plate: regex,
+        },
+        {
+          type: regex,
+        },
+      ]
+
+      query.$or = or
+
+      return this.vehiclesModel.find(query).exec()
+    } catch (e) {
+      throw new BadRequestException(e.message)
+    }
+  }
 }
